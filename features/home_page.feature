@@ -17,7 +17,6 @@ Feature: Manage welcomes
     When I follow "Sign up"
     Then I should be on the sign up page
     
-  @wip
   Scenario: Route list should be shown on the home page
     Given I am on the home page
     Then I should see "Available Routes"
