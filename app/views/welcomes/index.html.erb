@@ -2,3 +2,10 @@
 
 <%= link_to 'Sign in', new_user_session_path %>
 <%= link_to 'Sign up', new_user_registration_path %>
+
+<h2>Available Routes</h2>
+<ul>
+  <% @routes.each do |route|%>
+    <li>From <%= route.from %> to <%= route.to %>: <%= link_to root_path %></li>
+  <% end %>
+</ul>

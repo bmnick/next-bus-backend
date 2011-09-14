@@ -110,6 +110,12 @@ Then /^(?:|I )should see "([^"]*)"$/ do |text|
   end
 end
 
+Then /^(?:|I )should see a list of the following:$/ do |fields|
+  fields.rows_has.each do |value|
+    Then %{I should see "#{value}"}
+  end
+end
+
 Then /^(?:|I )should see \/([^\/]*)\/$/ do |regexp|
   regexp = Regexp.new(regexp)
 
