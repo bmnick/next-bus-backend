@@ -1,7 +1,7 @@
 NextBusBackend::Application.routes.draw do
   devise_for :users
 
-  resources :welcomes
+  # resources :welcomes
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
